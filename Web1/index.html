@@ -21,6 +21,8 @@
     <title>금호전기..</title>
     <!-- 기본 플러그인 연결 -->
     <script src="./jquery-latest.js"></script>
+     <!-- 스타일 리셋 -->
+     <link rel="stylesheet" href="./css/normalize.css">
     <!-- 웹 폰트/폰트 모듈 연결-->
     <style>
     @font-face {
@@ -29,11 +31,62 @@
         font-weight: normal;
         font-style: normal;
     }
-    *{ font-family: GimpoGothicBold00;}
+    * { font-family: GimpoGothicBold00;}
+    [class*='xi']{font-size: 30px;color: black;}
+    [class*='xi']:hover {color: red;}
+
+    /* ----------------------------- */
+    * {margin:0; padding: 0;}
+
+    /*
+    ul { list-style: none;}
+    a {text-decoration: none; color: black;}
+    .wrap{clear: both; width: 100%;}
+    #hd{clear: both; height: 90px; width: 100%;}
+    .hd_wrap{width: 1200px; margin: 0 auto;}
+    .logo {display: block; width: 200px; float: left; margin-top: 27px;}
+    .logo img {display: block; width: 100%; }
+    #gnb>ul>li{float: left; margin-left: 40px; margin-top: 27px;}
+    .sub li {clear: both; margin-top: 10px; background-color: red;}
+    #tnb{float: right; margin-top: 27px;} 
+    #content{clear: both; width: 100%;}
+    #ft{clear: both; width: 100%}
+    */
+
+
+
+
+
+
+
+    ul { list-style: none;}
+    .wrap{clear: both; width: 100%;}
+    #hd{clear: both; width: 100%; height: 100px;}
+    .hd_wrap{width: 1720px; margin: 0 auto;}
+    #content{clear: both; width: 100%;}
+    #ft{clear: both; width: 100%;}
+    .logo{display:block; width: 174px; float: left; margin-top: 27px;}
+    .logo img{display: block; width: 100%;}
+    #gnb{float: left;}
+    #tnb{float: right;}
+    #gnb > ul > li {float: left; padding-left: 50px; padding-right: 20px;
+    position: relative;  /* 부모의 기준으로 맞춰줌 */
+    }
+    #gnb > ul > li > span { display: block; line-height: 100px; cursor: pointer;}
+    #gnb li .sub { position: absolute; left: 40px; top: 100px;height: 280px; width: 150px;background-color: white;
+    line-height: 30px;
+    }
+
+
     </style>
     
-    <!-- 스타일 리셋 -->
-    <link rel="stylesheet" href="./css/normalize.css">
+
+
+    <!-- XEIcon -->
+    <<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+
+
 
 
 </head>
@@ -41,7 +94,7 @@
  <div id="wrap">
     <header id="hd">
         <div class="hd_wrap">
-            <a href="" class="logo"><img src="./img/logo.png" alt="" width="174px" height="30"></a>
+            <a href="" class="logo"><img src="./img/logo.png" alt="" ></a>
             <nav id="gnb">
                 <ul>
                     <li>
@@ -100,6 +153,7 @@
                 <p id="tnb">
                      <a href="">로그인</a>
                      <a href="">사이트맵</a>
+                     <a href="">오시는길</a>
                  </p>
         </div>
     </header>
@@ -108,10 +162,12 @@
                 <figure id="vs">
                     <ul>
                         <li>
-                            <a href=""><img src="./img/m_pro001.jpg" alt=""></a>
+                            <a href=""><video src="./video/main_video01.mp4" id="video01" autoplay playsinline muted data-keepplaying></video></a>
                             <div class="tit_box">
-                                <h2 class="vs_tit">슬라이드</h2>
-                                <p class="vs_com">1</p>
+                                <h2 class="vs_tit">빛으로 세상을 밝히는</h2>
+                                <h2 class="vs_tit">글로벌 조명기업 금호전기</h2>
+                                <p class="vs_com">금호전기는 조명산업을 선도하는 기술력으로 글로벌 조명기업을 향해 나아갑니다.</p>
+                                <a href="">자세히 보기</a>
                             </div>
                         </li>
                     </ul>
@@ -119,10 +175,12 @@
                 <figure id="vs">
                     <ul>
                         <li>
-                            <a href=""><img src="./img/m_pro002.jpg" alt=""></a>
+                            <a href=""><video src="./video/main_video02.mp4" id="video02" autoplay playsinline muted data-keepplaying></video></a>
                             <div class="tit_box">
-                                <h2 class="vs_tit">슬라이드</h2>
-                                <p class="vs_com">2</p>
+                                <h2 class="vs_tit">번개표 금호전기는</h2>
+                                <h2 class="vs_tit">대한민국 빛의 역사입니다</h2>
+                                <p class="vs_com">since 1935, 오직 빛만을 연구해 온 조명 전문 기업 번개표 금호전기</p>
+                                <a href="">자세히 보기</a>
                             </div>
                         </li>
                     </ul>
@@ -130,21 +188,27 @@
                 <figure id="vs">
                     <ul>
                         <li>
-                            <a href=""><img src="./img/m_pro003.jpg" alt=""></a>
+                            <a href=""><video src="./video/main_video04.mp4" id="video04" autoplay playsinline muted data-keepplaying></video></a>
                             <div class="tit_box">
-                                <h2 class="vs_tit">슬라이드</h2>
-                                <p class="vs_com">3</p>
+                                <h2 class="vs_tit">끊임없는 변화와 혁신으로는</h2>
+                                <h2 class="vs_tit">미래의 빛을 만들어 갑니다</h2>
+                                <p class="vs_com">금호전기는 조명산업의 미래를 내다보는 비전으로 끊임없는 변화와 혁신을 이루고 있습니다.</p>
+                                <a href="">자세히 보기</a>
                             </div>
                         </li>
                     </ul>
+                    <div class="btn_group">
+                        <button class="xi-arrow-left"></button>
+                        <button class="xi-arrow-right"></button>
+                    </div>
                 </figure>
 
                 <div class="grid_box">
                     <ul>
                         <li class="col2">
                             <a href="">
-                                <h3 class="col_tit">1</h3>
-                                <p class="col_com">1</p>
+                                <h3 class="col_tit">일반 조명</h3>
+                                <p class="col_com">GENERAL LIGHTING</p>
                                 <span class="arrow">1</span>
                             </a>
                         </li>
@@ -154,8 +218,8 @@
                     <ul>
                         <li class="col2">
                             <a href="">
-                                <h3 class="col_tit">2</h3>
-                                <p class="col_com">2</p>
+                                <h3 class="col_tit">LED 조명</h3>
+                                <p class="col_com">LED LIGHTING</p>
                                 <span class="arrow">2</span>
                             </a>
                         </li>
@@ -165,8 +229,8 @@
                     <ul>
                         <li class="col2">
                             <a href="">
-                                <h3 class="col_tit">3</h3>
-                                <p class="col_com">3</p>
+                                <h3 class="col_tit">산업용 조명</h3>
+                                <p class="col_com">INDUSTRIAL LIGHTING</p>
                                 <span class="arrow">3</span>
                             </a>
                         </li>
@@ -176,8 +240,8 @@
                     <ul>
                         <li class="col2">
                             <a href="">
-                                <h3 class="col_tit">4</h3>
-                                <p class="col_com">4</p>
+                                <h3 class="col_tit">SMART 조명 시스템</h3>
+                                <p class="col_com">SAMRT LIGHTING SYSTEM</p>
                                 <span class="arrow">4</span>
                             </a>
                         </li>
@@ -187,8 +251,8 @@
                     <ul>
                         <li class="col2">
                             <a href="">
-                                <h3 class="col_tit">5</h3>
-                                <p class="col_com">5</p>
+                                <h3 class="col_tit">조달용 조명</h3>
+                                <p class="col_com">PROCUREMENT LIGHTING</p>
                                 <span class="arrow">5</span>
                             </a>
                         </li>
@@ -203,15 +267,20 @@
         </div>
     <footer id="ft">
         <div class="ft_wrap">
-            <div class="topbox">
-                <ul id="f_link">
-                    <li><a href="">개인정보처리방침</a></li>
-                    <li><a href="">회사소개</a></li>
-                    <li><a href="">온라인문의</a></li>
-                    <li><a href="">오시는길</a></li>
-                    <li><a href="">이메일 무단 수집거부</a></li>
-                </ul>
-            </div>
+                <nav class="fnb">
+                    <a href="">개인정보처리방침</a>
+                    <a href="">회사소개</a>
+                    <a href="">온라인문의</a>
+                    <a href="">오시는 길</a>
+                    <a href="">이메일 무단 수집거부</a>
+                </nav>
+                <nav class="sub">
+                    <ul>
+                        <li><a href="" class="xi-instagram" title="인스타"></a></li>
+                        <li><a href="" class="xi-youtube-play" title="유튜브"></a></li>
+                    </ul>
+                </nav>
+                <p class="copyright">Copyrights © 2021 KUMHO ELECTRIC,INC., LTD. ALL RIGHT RESERVED.</p>
         </div>
     </footer>
 </div>
