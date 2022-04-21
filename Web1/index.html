@@ -100,8 +100,10 @@
                 transition: 0.25s;
             }
 
-    #content { clear: both; width: 100%; overflow: hidden;}
-    .vs { width: 100%; }
+    #content { clear: both; width: 100%; 
+        overflow: hidden;
+    }
+    .vs { width: 100%;}
     .img_box { width: 400%;}
     .img_box li {float: left; width: 25%; position: relative;}
     .img_box li a {display: block;}
@@ -210,7 +212,7 @@
     </header>
         <div id="content">
             <div class="ct_wrap">
-                <figure id="vs">
+                <div id="vs">
                     <ul class="img_box">
                         <li>
                             <a href=""><video src="./video/main_video01.mp4" id="video01" class="img" autoplay playsinline muted data-keepplaying></video></a>
@@ -222,8 +224,8 @@
                             </div>
                         </li>
                     </ul>
-                </figure>
-                <figure id="vs">
+                </div>
+                <div id="vs">
                     <ul class="img_box">
                         <li>
                             <a href=""><video src="./video/main_video02.mp4" id="video02" class="img" autoplay playsinline muted data-keepplaying></video></a>
@@ -235,11 +237,11 @@
                             </div>
                         </li>
                     </ul>
-                </figure>
-                <figure id="vs">
+                </div>
+                <div id="vs">
                     <ul class="img_box">
                         <li>
-                            <a href=""><video src="./video/main_video04.mp4" id="video04" class="img" autoplay playsinline muted data-keepplaying></video></a>
+                            <a href=""><video src="./video/main_video04.mp4" id="video03" class="img" autoplay playsinline muted data-keepplaying></video></a>
                             <div class="tit_box">
                                 <h2 class="vs_tit">끊임없는 변화와 혁신으로는</h2>
                                 <h2 class="vs_tit">미래의 빛을 만들어 갑니다</h2>
@@ -252,7 +254,7 @@
                         <button class="xi-arrow-left"></button>
                         <button class="xi-arrow-right"></button>
                     </div>
-                </figure>
+                </div>
 
                 <div class="grid_box">
                     <ul>
@@ -310,16 +312,30 @@
                     </ul>
                 </div>
                 <script>
+
                     $(document).ready(function(){
                         wd = $(window).width();
                         var intv = setInterval(function(){
-                            ani1();
+                            ani2();
                         }, 3000);
-                        function ani1(){
-                            $(".img_box").not(":animated").animate({"margin-left":-wd+"px"}, 1000, function(){
-                                $(".img_box li").eq(0).appendTo($(".img_box"));
-                                $(".img_box").css("margin-left","0px");
-                            });
+                        // function ani1(){
+                        //     $(".img_box").not(":animated").animate({"margin-left":-wd+"px"}, 1000, function(){
+                        //     $(".img_box li").eq(0).appendTo($(".img_box"));
+                        //     $(".img box").css("margin-left","0px");
+                            
+                        //     });
+                        // }
+
+                        function ani2(){
+                            $("#video02").fadeOut(500);
+                            $("#video03").fadeOut(500);
+                            $("#video01").fadeOut(500);
+                            // $("#video02").fadeIn(1000);
+                            // $("#video02").fadeOut(500);
+                            // $("#video03").fadeIn(1000);
+                            // $("#video03").fadeOut(500);
+                            // $("#video01").fadeIn(1000);
+
                         }
                     });    
                     </script>
