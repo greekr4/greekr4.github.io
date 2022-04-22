@@ -104,8 +104,8 @@
         overflow: hidden;
     }
     .vs { width: 100%;}
-    .img_box { width: 400%;}
-    .img_box li {float: left; width: 25%; position: relative;}
+    .img_box { width: 300%;}
+    .img_box li {float: left; width: 33.333%; position: relative;}
     .img_box li a {display: block;}
     .img_box li a img {display: block; width: 100%; height: auto;}
     .img_box .tit_box{position: absolute;
@@ -215,7 +215,7 @@
                 <div id="vs">
                     <ul class="img_box">
                         <li>
-                            <a href=""><video src="./video/main_video01.mp4" id="video01" class="img" autoplay playsinline muted data-keepplaying></video></a>
+                            <a href=""><video src="./video/main_video01.mp4" id="video01" class="img" autoplay playsinline muted data-keepplaying ></video></a>
                             <div class="tit_box">
                                 <h2 class="vs_tit">빛으로 세상을 밝히는</h2>
                                 <h2 class="vs_tit">글로벌 조명기업 금호전기</h2>
@@ -228,7 +228,7 @@
                 <div id="vs">
                     <ul class="img_box">
                         <li>
-                            <a href=""><video src="./video/main_video02.mp4" id="video02" class="img" autoplay playsinline muted data-keepplaying></video></a>
+                            <a href=""><video src="./video/main_video02.mp4" id="video02" class="img" autoplay playsinline muted data-keepplaying ></video></a>
                             <div class="tit_box">
                                 <h2 class="vs_tit">번개표 금호전기는</h2>
                                 <h2 class="vs_tit">대한민국 빛의 역사입니다</h2>
@@ -241,7 +241,7 @@
                 <div id="vs">
                     <ul class="img_box">
                         <li>
-                            <a href=""><video src="./video/main_video04.mp4" id="video03" class="img" autoplay playsinline muted data-keepplaying></video></a>
+                            <a href=""><video src="./video/main_video04.mp4" id="video03" class="img" autoplay playsinline muted data-keepplaying ></video></a>
                             <div class="tit_box">
                                 <h2 class="vs_tit">끊임없는 변화와 혁신으로는</h2>
                                 <h2 class="vs_tit">미래의 빛을 만들어 갑니다</h2>
@@ -251,8 +251,8 @@
                         </li>
                     </ul>
                     <div class="btn_group">
-                        <button class="xi-arrow-left"></button>
-                        <button class="xi-arrow-right"></button>
+                        <a class="xi-arrow-left"></button>
+                        <a class="xi-arrow-right"></button>
                     </div>
                 </div>
 
@@ -312,12 +312,18 @@
                     </ul>
                 </div>
                 <script>
-
+                    
+                            var slide = 1;
+                            var autoplayv = 1;
+                            
+                            $("#video02").fadeOut(500);
+                            $("#video03").fadeOut(500);
+                            $("#video01").fadeIn(1000);
                     $(document).ready(function(){
                         wd = $(window).width();
                         var intv = setInterval(function(){
                             ani2();
-                        }, 3000);
+                        }, 7000);
                         // function ani1(){
                         //     $(".img_box").not(":animated").animate({"margin-left":-wd+"px"}, 1000, function(){
                         //     $(".img_box li").eq(0).appendTo($(".img_box"));
@@ -327,14 +333,39 @@
                         // }
 
                         function ani2(){
-                            $("#video02").fadeOut(500);
-                            $("#video03").fadeOut(500);
+                            var v1 = $("#video01").get(0);
+                            var v2 = $("#video02").get(0);
+                            var v3 = $("#video03").get(0);
+                            if (slide==1)
+                            {
                             $("#video01").fadeOut(500);
-                            // $("#video02").fadeIn(1000);
-                            // $("#video02").fadeOut(500);
-                            // $("#video03").fadeIn(1000);
-                            // $("#video03").fadeOut(500);
-                            // $("#video01").fadeIn(1000);
+                            setTimeout(function(){
+                            $("#video02").fadeIn(700);
+                            }, 500);
+                            v2.currentTime = 0;
+                            v2.play;
+                            slide = 2;
+                            } else if(slide==2){
+                            $("#video02").fadeOut(500);
+                            setTimeout(function(){
+                            $("#video03").fadeIn(700);
+                            }, 500);
+                            v3.currentTime = 0;
+                            v3.play;
+                            slide = 3;
+                            } else if(slide==3){
+                            $("#video03").fadeOut(500);
+                            setTimeout(function(){
+                            $("#video01").fadeIn(700);
+                            }, 500);
+                            v1.currentTime = 0;
+                            v1.play;
+                            slide = 1;
+                            }
+                          
+
+
+
 
                         }
                     });    
