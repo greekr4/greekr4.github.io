@@ -113,7 +113,7 @@
         top: 320px; left: 340px;
         
         color: white;}
-
+    /* 메인메뉴 텍스트 */
     .vs_tit{ font-size: 56px; line-height: 1.4em;}
     .vs_com{ font-size: 15px; margin-top: 20px;}
     .img_box .tit_box a {
@@ -130,9 +130,54 @@
     line-height: 50px;
     margin-top: 60px;
     }
+    /* 앞으로가기 뒤로가기 */
+    .btn_group{
+        position: absolute;
+        
+        font-size: 50px;
+        top: 500px;
+
+    }
+    .btn_group a{
+        color: #fff;
+    }
+
+/* 
+    그리드 
+  .grid_box {clear: both; width: 100%;}
+    .grid_wrap {clear: both; width: 100%;}
+    .gird_wrap ul {float: left;}
+    .col2 {width: 12%;}
+    */
+    .dotmo{
+    position: relative;
+    display: inline-block;
+    width: 600px;
+    vertical-align: middle;
+    padding-left: 80px;
+    box-sizing: border-box;
+    z-index: 8;
+    }
+
+    .dot{
+    background-color: aqua;
+    position: relative;
+    width: 80%;
+    padding: 30px 60px;
+    box-sizing: border-box;
+    transition: 0.8s;
+    margin: 5px 0;
+    
+    
+    }
+
+
+
 
     </style>
     
+
+
 
 
     <!-- XEIcon -->
@@ -250,13 +295,14 @@
                             </div>
                         </li>
                     </ul>
-                    <div class="btn_group">
-                        <a class="xi-arrow-left"></button>
-                        <a class="xi-arrow-right"></button>
-                    </div>
                 </div>
 
-                <div class="grid_box">
+                <div class="btn_group">
+                    <a href="">PREV</a>
+                    <a >/</a>
+                    <a href="">NEXT</a>
+                </div>
+                <!-- <div class="grid_box">
                     <ul>
                         <li class="col2">
                             <a href="">
@@ -273,7 +319,7 @@
                             <a href="">
                                 <h3 class="col_tit">LED 조명</h3>
                                 <p class="col_com">LED LIGHTING</p>
-                                <span class="arrow">2</span>
+                                <span class="arrow"><img src="/img/m_pro002.jpg" alt=""></span>
                             </a>
                         </li>
                     </ul>
@@ -284,7 +330,7 @@
                             <a href="">
                                 <h3 class="col_tit">산업용 조명</h3>
                                 <p class="col_com">INDUSTRIAL LIGHTING</p>
-                                <span class="arrow">3</span>
+                                <span class="arrow"><img src="/img/m_pro003.jpg" alt=""></span>
                             </a>
                         </li>
                     </ul>
@@ -295,22 +341,58 @@
                             <a href="">
                                 <h3 class="col_tit">SMART 조명 시스템</h3>
                                 <p class="col_com">SAMRT LIGHTING SYSTEM</p>
-                                <span class="arrow">4</span>
+                                <span class="arrow"><img src="/img/m_pro004.jpg" alt=""></span>
                             </a>
                         </li>
                     </ul>
-                </div>
+                </div> 
                 <div class="grid_box">
                     <ul>
                         <li class="col2">
                             <a href="">
                                 <h3 class="col_tit">조달용 조명</h3>
                                 <p class="col_com">PROCUREMENT LIGHTING</p>
-                                <span class="arrow">5</span>
+                                <span class="arrow"><img src="/img/m_pro005.jpg" alt=""></span>
                             </a>
                         </li>
                     </ul>
-                </div>
+                </div> -->
+                    <div class="dotmo">
+                            <div class="dot">
+                                <div class="dot_txt">
+                                <h4 class="col_tit">일반 조명</h4>
+                                <p>GENERAL LIGHTING</p>
+                                </div>
+                            </div>   
+                            <div class="dot">
+                                <div class="dot_txt">
+                                <h4 class="col_tit">LED 조명</h4>
+                                <p>LED LIGHTING</p>
+                                </div>
+                            </div>   
+                            <div class="dot">
+                                <div class="dot_txt">
+                                <h4 class="col_tit">산업용 조명</h4>
+                                <p>INDUSTRIAL LIGHTING</p>
+                                </div>
+                            </div>   
+                            <div class="dot">
+                                <div class="dot_txt">
+                                <h4 class="col_tit">SMART 조명 시스템</h4>
+                                <p>SAMRT LIGHTING SYSTEM</p>
+                                </div>
+                            </div>   
+                            <div class="dot">
+                                <div class="dot_txt">
+                                <h4 class="col_tit">조달용 조명</h4>
+                                <p>PROCUREMENT LIGHTING</p>
+                                </div>
+                            </div>   
+                    </div>
+                    <div class="dot_imgbox">
+
+                        
+                    </div>
                 <script>
                     
                             var slide = 1;
