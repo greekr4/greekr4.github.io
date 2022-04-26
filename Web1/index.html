@@ -142,14 +142,46 @@
         color: #fff;
     }
 
-/* 
-    그리드 
-  .grid_box {clear: both; width: 100%;}
-    .grid_wrap {clear: both; width: 100%;}
-    .gird_wrap ul {float: left;}
-    .col2 {width: 12%;}
-    */
+    
+ /* 그리드 박스 */
+ .grid_box { clear:both; width: 100%; }
+    .grid_wrap { clear:both; width: 100%; }
+    .grid_wrap li { float:left; height:16.66667vw; 
+    background-position:center center; }
+    .grid_wrap li.item1 { background-image: url("./img/m_pro001_mini.jpg"); } 
+    .grid_wrap li.item2 { background-image: url("./img/m_pro002_mini.jpg"); } 
+    .grid_wrap li.item3 { background-image: url("./img/m_pro003_mini.jpg"); } 
+    .grid_wrap li.item4 { background-image: url("./img/m_pro005.jpg");}
+    .grid_wrap li.item5 { background-image: url("./img/m_pro006_mini.png");}
+    .grid_wrap li.item6 { background-image: url("./img/main_bg03_1.jpg"); }
+    
+
+    /* 그리드 */
+    .col1 { width: 8.33333%; }
+    .col2 { width: 16.66667%; }
+    .col3 { width: 25%; }
+    .col4 { width: 33.33333%; }
+    .col5 { width: 41.66667%; }
+    .col6 { width: 50%; }
+    .grid_wrap li a { display:block; padding: 28px; height: 265px;}
+    .col_tit, .col_com { color:#000; }
+    .col_tit { padding-top: 18px; }
+    .col_tit.a, .col_com.a, .col_tit.c, .col_com.c{color: #fff;text-shadow: 1.5px 1.5px 1.5px #000;}
+    /* .col_tit.w , .col_com.w { color:#fff; text-shadow:1px 1px 1px #333; }
+    .col_tit.w { padding-top: 0; } */
+    /* .arrow { display:block; margin-top: 50px; }
+    .arrow:before { content:""; display:block; width:2px; height:5px; 
+    border-bottom:3px solid #555; float:left; transition:0.4s; }
+    .arrow:after { content:""; display:block; width: 30px; height: 8px; 
+    background-image: url("./img/newsletter_arrow_black.png"); float:left; } */
+    .col_com { font-size:12px; padding-top: 20px; font-weight: 200;  }
+    .grid_wrap li:hover a .arrow:before { width: 18px;  }
+
+
+    /*
+    ///////////////////////////////////////////
     .dotmo{
+    float: left;
     position: relative;
     display: inline-block;
     width: 600px;
@@ -168,12 +200,64 @@
     transition: 0.8s;
     margin: 5px 0;
     
-    
     }
 
+    .dot_imgbox{
+        position: relative;
+            display: block;
+            float: left;
+            width: 850px;
+            height: 512px;
+            background-color: red;
+            margin: 5px 0;
+    }
+    .dot_imgbox img{
+        position: relative; 
+        width: 100%;
+        height: 100%;
+    }
+
+    .txt_box{
+        position: relative;
+            display: inline-block;
+            float: left;
+            top: 50px;
+            left: 50px;
+            height: 512px;
+            margin: 5px 0;
+            padding-right: 100px;
+    }
+    .txt_box h3{
+        font-size: 45px;
+        line-height: 1.3em;
+    }
+    .txt_box h3 em{
+        color: red;
+        font-style: normal
+    }
+    .txt_box p{
+        line-height: 1.3em;
+        color: #797979;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 1.5em;
+        margin-top: 20px;
+    }
+    */
 
 
-
+    /* 푸터 */
+    #ft { clear:both; width: 100%; padding-top: 20px; border-top:3px solid #f1f1f1; 
+    height: 100px;}
+    .ft_wrap { clear:both; width: 1280px; margin: 0 auto; }
+    .fnb { float:left; }
+    .fnb a { display:block; float:left; margin:14px; 
+        margin-left: 0; margin-right: 28px; font-size:12px; }
+    .fnb a:after { content:"|"; padding-left: 28px; }
+    .fnb a:last-child::after { content:""; }
+    .snb { float:right; }
+    .snb ul li { float:left; margin-left: 28px; }
+    .copyright { clear:both; padding-bottom: 28px; font-size:12px; }
     </style>
     
 
@@ -357,6 +441,26 @@
                         </li>
                     </ul>
                 </div> -->
+
+                <!-- //////////////////////////////////////////// -->
+                <!-- 
+                    <div class="txt_box">
+                        <div class="m_txt">
+                            <h3>빛이 필요한 <br>모든 곳에,<br>
+                                <em>번개표</em></h3>
+
+                                <p>
+
+                                    SINCE 1935,<br>
+                                    오직 빛만을 연구해 온 기업<br>
+                                    대한민국 빛의 역사와 함께해 온<br>
+                                    번개표 금호전기의<br>
+                                    대표 제품을 소개합니다.
+
+                                </p>
+
+                        </div>
+                    </div>
                     <div class="dotmo">
                             <div class="dot">
                                 <div class="dot_txt">
@@ -390,9 +494,10 @@
                             </div>   
                     </div>
                     <div class="dot_imgbox">
-
+                        <img src="./img/m_pro001.jpg" alt="" class="dot_img1">
                         
                     </div>
+                    -->
                 <script>
                     
                             var slide = 1;
@@ -457,9 +562,54 @@
                     <source src="/video/main_video01.mp4" type="video/mp4">
                 </video> -->
             </div>
-            
+         </div>
 
         </div>
+        <div class="grid_box">
+            <ul class="grid_wrap">
+                <li class="col2 item1">
+                    <a href="">
+                        <h3 class="col_tit a">일반 조명</h3>
+                        <p class="col_com a">GENERAL LIGHTING</p>
+                        <span class="arrow"></span>
+                    </a>
+                </li>
+                <li class="col2 item2">
+                    <a href="">
+                        <h3 class="col_tit b">LED 조명</h3>
+                        <p class="col_com c">LED LIGHTING</p>
+                        <span class="arrow"></span>
+                    </a>
+                </li>
+                <li class="col2 item3">
+                    <a href="">
+                        <h3 class="col_tit c">산업용 조명</h3>
+                        <p class="col_com c">INDUSTRIAL LIGHTING</p>
+                        <span class="arrow"></span>
+                    </a>
+                </li>
+                <li class="col2 item4">
+                    <a href="">
+                        <h3 class="col_tit d">조달용 조명</h3>
+                        <p class="col_com d">PROCUREMENT LIGHTING</p>
+                    </a>
+                </li>
+                <li class="col2 item5">
+                    <a href="">
+                        <h3 class="col_tit e">채용 안내</h3>
+                        <p class="col_com e">금호전기와 함께 할 인재를 모집합니다.</p>
+                    </a>
+                </li>
+                <li class="col2 item6">
+                    <a href="">
+                        <h3 class="col_tit f">고객지원</h3>
+                        <p class="col_com f">금호전기 제품에 대해 궁금하신 점을 알려드립니다. 고객 만족을 위해 최선을 다하겠습니다.</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
     <footer id="ft">
         <div class="ft_wrap">
                 <nav class="fnb">
@@ -469,7 +619,7 @@
                     <a href="">오시는 길</a>
                     <a href="">이메일 무단 수집거부</a>
                 </nav>
-                <nav class="sub">
+                <nav class="snb">
                     <ul>
                         <li><a href="" class="xi-instagram" title="인스타"></a></li>
                         <li><a href="" class="xi-youtube-play" title="유튜브"></a></li>
