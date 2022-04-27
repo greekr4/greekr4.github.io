@@ -23,281 +23,16 @@
     <script src="./jquery-latest.js"></script>
      <!-- 스타일 리셋 -->
      <link rel="stylesheet" href="./css/normalize.css">
-    <!-- 웹 폰트/폰트 모듈 연결-->
-    <style>
-    @font-face {
-        font-family: 'GimpoGothicBold00';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/GimpoGothicBold00.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
-    * { font-family: GimpoGothicBold00;}
-    [class*='xi']{font-size: 30px;color: black;}
-    [class*='xi']:hover {color: red;}
-
-    /* ----------------------------- */
-    * {margin:0; padding: 0;}
-
-    /*
-    ul { list-style: none;}
-    a {text-decoration: none; color: black;}
-    .wrap{clear: both; width: 100%;}
-    #hd{clear: both; height: 90px; width: 100%;}
-    .hd_wrap{width: 1200px; margin: 0 auto;}
-    .logo {display: block; width: 200px; float: left; margin-top: 27px;}
-    .logo img {display: block; width: 100%; }
-    #gnb>ul>li{float: left; margin-left: 40px; margin-top: 27px;}
-    .sub li {clear: both; margin-top: 10px; background-color: red;}
-    #tnb{float: right; margin-top: 27px;} 
-    #content{clear: both; width: 100%;}
-    #ft{clear: both; width: 100%}
-    */
-
-
-    a {text-decoration: none; color: black;}
-    ul { list-style: none;}
-    .wrap{clear: both; width: 100%;}
-    #hd{clear: both; width: 100%; height: 100px; position: fixed; top: 0; left: 0; z-index: 999;
-        background-color: white;
-    }
-    .hd_wrap{width: 1720px; margin: 0 auto;}
-    #content{clear: both; width: 100%;}
-    #ft{clear: both; width: 100%;}
-    .logo{display:block; width: 174px; float: left; margin-top: 35px;}
-    .logo img{display: block; width: 100%;}
-    #gnb{float: left;}
-    #tnb{float: right; padding-right: 50px; padding-top: 45px; padding-bottom: 45px; padding-left: 50px;}
-    #tnb a { font-size: 0.85em; padding-left: 10px; padding-right: 10px;}
-    #tnb a:hover { color: hotpink;
-    
-    }
-    #gnb > ul > li {float: left; padding-left: 50px; padding-right: 20px;
-    position: relative;  /* 부모의 기준으로 맞춰줌 */
-    left: 400px;
-    font-size: 21px;
-    }
-
-
-    #gnb > ul > li > span { display: block; line-height: 100px; cursor: pointer;}
-    #gnb ul li .sub { display: none; position: absolute; left: 40px; top: 100px;
-        height: 300px; width: 100%; z-index: 999; font-size: 18px;
-        
-        padding-right: 10px; padding-left: 10px;
-        background-color: white;  
-    }
-    
-    
-
-    #gnb ul li .sub li {line-height: 30px;}
-    #gnb ul li:hover .sub {display: block;
-    }
-    .w_board{
-        position: absolute;
-        display: none;
-        z-index: 998;
-        background-color: white;
-        left: 0px;
-        top: 100px;
-        width: 100%;
-        height: 300px;
-    }
-    #gnb ul li:hover span{color: red;
-                        text-decoration: underline red solid;
-                        text-underline-offset: 43px;
-                        transition: 0.25s;
-    }
-    
-    #gnb ul li ul li a:hover {color: red;
-                text-decoration: underline red solid;
-                text-underline-offset: 5px;
-                transition: 0.25s;
-            }
-
-            
-
-
-
-    #content { clear: both; width: 100%; 
-        overflow: hidden;
-    }
-    .vs { width: 100%;}
-    .img_box { width: 300%;}
-    .img_box li {float: left; width: 33.333%; position: relative;}
-    .img_box li a {display: block;}
-    .img_box li a img {display: block; width: 100%; height: auto;}
-    .img_box .tit_box{position: absolute;
-
-        top: 320px; left: 340px;
-        
-        color: white;}
-    /* 메인메뉴 텍스트 */
-    .vs_tit{ font-size: 56px; line-height: 1.4em;}
-    .vs_com{ font-size: 15px; margin-top: 20px;}
-    .img_box .tit_box a {
-    display: inline-block;
-    vertical-align: top;
-    font-weight: bold;
-    font-size: 17px;
-    color: #fff;
-    width: 200px;
-    height: 47px;
-    border: 1px solid #fff;
-    box-sizing: border-box;
-    text-align: center;
-    line-height: 50px;
-    margin-top: 60px;
-    }
-    /* 앞으로가기 뒤로가기 */
-    .btn_group{
-        position: absolute;
-        font-size: 20px;
-        top: 650px;
-        left: 350px;
-
-    }
-    .btn_group span{
-        color: #fff;
-    }
-    .btn_group .prev_btn:hover,.next_btn:hover{
-        color: #bbb;text-shadow: 1.5px 1.5px 1.5px #000;
-        cursor: pointer;
-    }
-
-    
- /* 그리드 박스 */
- .grid_box { clear:both; width: 100%; }
-    .grid_wrap { clear:both; width: 100%; }
-    .grid_wrap li { float:left; height:16.66667vw; 
-    background-position:center center; }
-    .grid_wrap li.item1 { background-image: url("./img/m_pro001_mini.jpg"); } 
-    .grid_wrap li.item2 { background-image: url("./img/m_pro002_mini.jpg"); } 
-    .grid_wrap li.item3 { background-image: url("./img/m_pro003_mini.jpg"); } 
-    .grid_wrap li.item4 { background-image: url("./img/m_pro005.jpg");}
-    .grid_wrap li.item5 { background-image: url("./img/m_pro006_mini.png");}
-    .grid_wrap li.item6 { background-image: url("./img/main_bg03_1.jpg"); }
-    
-
-    /* 그리드 */
-    .col1 { width: 8.33333%; }
-    .col2 { width: 16.66667%; }
-    .col3 { width: 25%; }
-    .col4 { width: 33.33333%; }
-    .col5 { width: 41.66667%; }
-    .col6 { width: 50%; }
-    .grid_wrap li a { display:block; padding: 28px; height: 265px;}
-    
-    .col_tit { padding-top: 18px; }
-    .col_tit, .col_com{color: #fff;text-shadow: 1.5px 1.5px 1.5px #000;}
-    
-    /* .col_tit.w , .col_com.w { color:#fff; text-shadow:1px 1px 1px #333; }
-    .col_tit.w { padding-top: 0; } */
-    /* .arrow { display:block; margin-top: 50px; }
-    .arrow:before { content:""; display:block; width:2px; height:5px; 
-    border-bottom:3px solid #555; float:left; transition:0.4s; }
-    .arrow:after { content:""; display:block; width: 30px; height: 8px; 
-    background-image: url("./img/newsletter_arrow_black.png"); float:left; } */
-    .col_com { font-size:12px; padding-top: 20px; font-weight: 200;  }
-    /* .grid_wrap li:hover a .arrow:before { width: 18px;  } */
-
-
-    /*
-    ///////////////////////////////////////////
-    .dotmo{
-    float: left;
-    position: relative;
-    display: inline-block;
-    width: 600px;
-    vertical-align: middle;
-    padding-left: 80px;
-    box-sizing: border-box;
-    z-index: 8;
-    }
-
-    .dot{
-    background-color: aqua;
-    position: relative;
-    width: 80%;
-    padding: 30px 60px;
-    box-sizing: border-box;
-    transition: 0.8s;
-    margin: 5px 0;
-    
-    }
-
-    .dot_imgbox{
-        position: relative;
-            display: block;
-            float: left;
-            width: 850px;
-            height: 512px;
-            background-color: red;
-            margin: 5px 0;
-    }
-    .dot_imgbox img{
-        position: relative; 
-        width: 100%;
-        height: 100%;
-    }
-
-    .txt_box{
-        position: relative;
-            display: inline-block;
-            float: left;
-            top: 50px;
-            left: 50px;
-            height: 512px;
-            margin: 5px 0;
-            padding-right: 100px;
-    }
-    .txt_box h3{
-        font-size: 45px;
-        line-height: 1.3em;
-    }
-    .txt_box h3 em{
-        color: red;
-        font-style: normal
-    }
-    .txt_box p{
-        line-height: 1.3em;
-        color: #797979;
-        font-weight: 500;
-        font-size: 17px;
-        line-height: 1.5em;
-        margin-top: 20px;
-    }
-    */
-
-
-    /* 푸터 */
-    #ft { clear:both; width: 100%; padding-top: 20px; border-top:3px solid #f1f1f1; 
-    height: 100px;}
-    .ft_wrap { clear:both; width: 1280px; margin: 0 auto; }
-    .fnb { float:left; }
-    .fnb a { display:block; float:left; margin:14px; 
-        margin-left: 0; margin-right: 28px; font-size:12px; }
-    .fnb a:after { content:"|"; padding-left: 28px; }
-    .fnb a:last-child::after { content:""; }
-    .snb { float:right; }
-    .snb ul li { float:left; margin-left: 28px; }
-    .copyright { clear:both; padding-bottom: 28px; font-size:12px; }
-
-
-    .arrow{
-        
-        padding-top: 10px;
-        padding-left: 100px;
-        width: 100px;
-    }
-    
-    </style>
-    
-    
-
-
-
+    <!-- css 연결 -->
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/main.css">
 
     <!-- XEIcon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+
+    </style>
 
 
 
@@ -315,43 +50,41 @@
                     <li class="menu">
                         <span class="menu">Company</span>
                         <ul class="sub" id="hov">
-                            <li><a href="">회사개요</a></li>
-                            <li><a href="">CEO 인사말</a></li>
-                            <li><a href="">연혁</a></li>
-                            <li><a href="">비전</a></li>
-                            <li><a href="">수상현황</a></li>
-                            <li><a href="">계열사 소개</a></li>
-                            <li><a href="">CI/BI</a></li>
-                            <li><a href="">Contact us</a></li>
+                            <li><a href="company.html#page1">회사개요</a></li>
+                            <li><a href="company.html#page2">CEO 인사말</a></li>
+                            <li><a href="company.html#page3">연혁</a></li>
+                            <li><a href="company.html#page4">비전</a></li>
+                            <li><a href="company.html#page5">수상현황</a></li>
+                            <li><a href="company.html#page6">계열사 소개</a></li>
                         </ul>
                     </li>
                     <li class="menu">
                         <span class="menu">Products</span>
                         <ul class="sub">
-                            <li><a href="">일반조명</a></li>
-                            <li><a href="">LED조명</a></li>
-                            <li><a href="">산업용조명</a></li>
-                            <li><a href="">스마트조명시스템</a></li>
-                            <li><a href="">조달용 조명</a></li>
-                            <li><a href="">기타제품</a></li>
+                            <li><a href="products.html#page1">일반조명</a></li>
+                            <li><a href="products.html#page2">LED조명</a></li>
+                            <li><a href="products.html#page3">산업용조명</a></li>
+                            <li><a href="products.html#page4">스마트조명시스템</a></li>
+                            <li><a href="products.html#page5">조달용 조명</a></li>
+                            <li><a href="products.html#page6">기타제품</a></li>
                         </ul>
                     </li>
                     <li class="menu">
                         <span class="menu">Careers</span>
                         <ul class="sub">
-                            <li><a href="">인재상</a></li>
-                            <li><a href="">인사제도</a></li>
-                            <li><a href="">복리후생</a></li>
-                            <li><a href="">채용안내</a></li>
+                            <li><a href="careers.html#page1">인재상</a></li>
+                            <li><a href="careers.html#page2">인사제도</a></li>
+                            <li><a href="careers.html#page3">복리후생</a></li>
+                            <li><a href="careers.html#page4">채용안내</a></li>
                         </ul>
                     </li>
                     <li span class="menu">
                         <span class="menu">Support</span>
                         <ul class="sub">
-                            <li><a href="">대리점 개설</a></li>
-                            <li><a href="">고객센터</a></li>
-                            <li><a href="">FAQ</a></li>
-                            <li><a href="">전국 지사안내</a></li>
+                            <li><a href="support.html#page1">대리점 개설</a></li>
+                            <li><a href="support.html#page2">고객센터</a></li>
+                            <li><a href="support.html#page3">FAQ</a></li>
+                            <li><a href="support.html#page4">전국 지사안내</a></li>
                         </ul>
                     </li>
                     <script>
@@ -363,6 +96,7 @@
                             $(".w_board").css('display','none');
 
                         });
+            
                     </script>
                     <!-- <li>
                         <span>메인5</span>
@@ -545,7 +279,6 @@
 
             </div>
          </div>
-
         </div>
         <div class="grid_box">
             <ul class="grid_wrap">
