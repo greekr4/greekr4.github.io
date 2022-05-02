@@ -22,7 +22,7 @@
    }
    .hd_wrap{width: 1720px; margin: 0 auto;}
    #content{clear: both; width: 100%;}
-   #ft{clear: both; width: 100%;}
+   #ft{clear: both; width: 100%; z-index: 999;}
    .logo{display:block; width: 174px; float: left; margin-top: 35px;}
    .logo img{display: block; width: 100%;}
    #gnb{float: left;}
