@@ -503,3 +503,48 @@ left: 145px;
     left: 36%;
     top: 20px;
 }
+
+.locationbox{
+    display: block;
+    float: left;
+    height: 750px;
+}
+.location_img{
+    float: left;
+    position: relative;
+    left: 30%;
+}
+.location_img img{
+height: 900px;
+}
+.location_txt{
+    float: left;
+    position: relative;
+    left: 55%;
+}
+.location_txt_box{
+    clear: both;
+    position: relative;
+    top: 10px;
+    width: 500px;
+    height: 750px;
+}
+.location_item{
+    float: left;
+    width: 100%;
+    height: 20%;
+    border: 2px solid skyblue;
+}
+.location_item h1{
+text-align: center;
+}
+.location_item p{
+    position: relative;
+    top: 0;
+    text-align: center;
+    color: #777;
+ }
+
+ .con2_item:hover a{
+     color: red;
+ }
