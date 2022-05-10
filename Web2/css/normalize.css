@@ -13,6 +13,12 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 
+a {
+clear: both;
+width: 1600px;
+margin: 0 auto;
+text-align: center;
+}
 /* Sections
    ========================================================================== */
 
