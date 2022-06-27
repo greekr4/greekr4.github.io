@@ -111,7 +111,7 @@
             color: #363636;
         }
 
-        .html#page2 .ct_wrap>h3 {
+        #page2 .ct_wrap>h3 {
             text-align: center;
             font-size: 60px;
             font-weight: 250;
@@ -550,7 +550,7 @@
             </div>
             <div class="heal_wrap">
                 	<div class="heal_tit_box">
-                		<h2>상지골절 치료법</h2>
+                		<h2>하지골절 치료법</h2>
                 	</div>
                 	<div class="heal_menu_box">
                 		<ul class="heal_menu">
@@ -572,6 +572,10 @@
                 <script type="text/javascript">
     $(document).ready(function () {
     	$('.heal_menu_btn2').eq(0).css("background-color","#347eb5");
+        $('.heal_menu_btn2').css("background-color","");
+    		$('.heal_menu_btn2').eq(0).css("background-color","#347eb5");
+    		$('.heal_img_box2').css("display","none");
+    		$('.heal_img_box2').eq(0).css("display","block");
     	
      	$('.heal_menu_btn2').eq(0).click(function(){
     		$('.heal_menu_btn2').css("background-color","");
