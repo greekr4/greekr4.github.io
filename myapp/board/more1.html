@@ -1,0 +1,411 @@
+
+
+
+
+
+
+
+
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-latest.js"></script>
+        <link rel="stylesheet" href="/myapp/resources/css/normalize.css">
+        <link rel="stylesheet" href="/myapp/resources/css/common.css">
+        <title>HomeZZ</title>
+        <style>
+        input, textarea{
+        border: 1px solid #777;
+        font-size: 0.9em;
+        line-height: 2em;
+        padding-left: 1em;
+        padding-top: 5px;
+        }
+        
+        .table_wrap{
+        width: 1400px;
+        margin: 150px auto;
+        }
+        .table_wrap table {
+        width: 100%;
+        margin: 0 auto;	
+        table-layout: fixed;
+        border-spacing: 0;
+        }
+        .table_wrap .top_info th{
+        border-bottom: 1px solid #777;
+        }
+        .table_wrap .main_tit{
+        border-bottom: 1px solid #777;
+        padding-top: 15px;
+        }
+        .table_wrap .main_con{
+        text-align: left;
+        vertical-align:top;
+        min-width: 100%;
+        height: 500px;
+        line-height: 1.5em;
+        padding-left: 2em;
+        padding-top: 2em;
+        }
+        .table_wrap .main_btn{
+        border-bottom: 1px solid #777;
+        }
+        .table_wrap button{
+        height: 30px;
+        width: 50px;
+        padding-top: 7px;
+        margin-bottom: 10px;
+        }
+        .table_wrap .foot_btn td{
+        text-align:right;
+        padding-top: 10px;
+        }
+        .table_wrap .top_info{
+        color: #999;
+        }
+        table.comment {
+        margin-top: 100px;
+         }
+        .comment .comment_thumb{
+        text-align: right;
+        }
+        .comment .comment_top td{
+        border-bottom: 1px solid #777;
+        padding-bottom: 10px;
+        }
+        .comment .comment_main_info{
+        color: #777;
+        }
+        .comment .comment_main_info td{
+        padding-top: 12px;
+        }
+        .comment .comment_main_con td{
+        padding-top: 12px;
+        height: 100px;
+        vertical-align: top;
+        }
+        table.comment_form{
+        margin-top: 50px;
+        }
+        .c_comment td {padding-left: 30px;}
+        </style>
+    </head>
+    <body>
+        <header id="header">
+        
+    
+    
+    
+    
+    
+    
+    
+    <div class="header_wrap">
+        <div class="header_top">
+            <h1>무척조은병원은 환자중심의 진료환경을 지향합니다.</h1>
+        </div>
+        <div class="util_wrap">
+        <div class="util_menu">
+            <ul>
+                
+                
+                <li><a href="/myapp/member/agreement.html">회원가입</a></li>
+                <li><a href="/myapp/member/loginForm.html">로그인</a></li>
+                
+            </ul>
+        </div>
+        </div>
+        <div class="header_bottom" >
+            <div class="logo"><a href="../../web4/index.html"><img src="/myapp/resources/img/header_logo.png" alt="로고"></a></div>
+            <ul style="margin-left: 150px;">
+                <a href="/myapp/sub1.html#page1">병원소개</a>
+                <div class="submenu_wrap">
+                    <div class="submenu">
+                    <a href="/myapp/sub1.html#page1" onclick="javascript:window.scrollTo(0,0)"><li>병원 소개</li></a>
+                    <a href="/myapp/sub1.html#page2"><li>의료진 소개</li></a>
+                    <a href="/myapp/sub1.html#page3"><li>장비 소개</li></a>
+                    </div>
+                </div>
+            </ul>
+            <ul>
+                <a href="/myapp/sub2.html#page1">관절센터</a>
+                <div class="submenu_wrap">
+                    <div class="submenu">
+                    <a href="/myapp/sub2.html#page1"><li>관절치료센터 소개</li></a>
+                    <a href="/myapp/sub2.html#page2"><li>어깨질환</li></a>
+                    <a href="/myapp/sub2.html#page3"><li>무릎질환</li></a>
+                    </div>
+                </div>
+            </ul>
+            <ul>
+                <a href="/myapp/sub3.html#page1">척추센터</a>
+                <div class="submenu_wrap">
+                    <div class="submenu">
+                    <a href="/myapp/sub3.html#page1"><li>척추치료센터 소개</li></a>
+                    <a href="/myapp/sub3.html#page2"><li>목디스크</li></a>
+                    <a href="/myapp/sub3.html#page3"><li>허리디스크</li></a>
+                    </div>
+                </div>
+            </ul>
+            <ul>
+                <a href="/myapp/sub4.html#page1">도수재활센터</a>
+                <div class="submenu_wrap">
+                    <div class="submenu" style="left:-42px;">
+                    <a href="/myapp/sub4.html#page1"><li>도수재활센터 소개</li></a>
+                    </div>
+                </div>
+            </ul>
+            <ul>
+                <a href="/myapp/sub5.html#page1">외상센터</a>
+                <div class="submenu_wrap">
+                    <div class="submenu">
+                    <a href="/myapp/sub5.html#page1"><li>상지골절</li></a>
+                    <a href="/myapp/sub5.html#page2"><li>하지골절</li></a>
+                    <a href="/myapp/sub5.html#page3"><li>척추골절</li></a>
+                    </div>
+                </div>
+            </ul>
+            <ul>
+                <a href="/myapp/board/notice.html">커뮤니티</a>
+                <div class="submenu_wrap">
+                    <div class="submenu">
+                    <a href="/myapp/board/notice.html"><li>공지사항</li></a>
+                    <a href="/myapp/board/news.html"><li>뉴스</li></a>
+                    <a href="/myapp/board/free.html"><li>자유게시판</li></a>
+                    <a href="/myapp/board/qna.html"><li>문의</li></a>
+                    <a href="/myapp/data_board/data_boardList.html"><li>파일게시판</li></a>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+        </header>
+        
+    <div id="ct">
+    <div class="table_wrap">
+    <iframe width=0 height=0 name="hiddenframe1" style="display:none;"></iframe>
+    <table>
+    <thead>
+    <tr class="top_type">
+    <th colspan="3">
+    
+    <h3>공지사항</h3>
+    
+    
+    
+    </th>
+    </tr>
+    <tr class="top_info">
+    <th>admin2</th>
+    <th>2022-06-27</th>
+    <th>조회: 9 추천: 1</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <th colspan="3" class="main_tit">
+    <h1>공지사항입니다.</h1>
+    </th>
+    </tr>
+    <tr>
+    <th colspan="3" class="main_con">
+    안녕하세요<br>공지사항입니다.
+    </th>
+    </tr>
+    <tr>
+    <th colspan="3" class="main_btn"><button onclick="window.open('/myapp/board/thumbup?no=196','hiddenframe1')">추천</button></th>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr class="foot_btn">
+    <td colspan="3">
+    
+    <button onclick="location.href = '/myapp/board/notice.html'">목록</button>
+    
+    
+    
+    
+    
+    <button onclick="location.href = '/myapp/board/EditForm?no=196'">수정</button>
+    <button onclick="location.href = '/myapp/board/del?no=196&type=1'">삭제</button>
+    
+    </td>
+    </tr>
+    </tfoot>
+    </table>
+    <table class="comment">
+    <thead>
+    <tr class="comment_top">
+    <td colspan="3" style="text-align: left;">댓글<span style="color: red;">(1)</span></td>
+    </tr>
+    </thead>
+    <tbody>
+    
+    
+    
+    <tr class="comment_main_info">
+    <td colspan="2" class="comment_winfo">
+    admin2 | 2022-06-27
+    
+    <button onclick="$('.cc_form').eq(0).css('display','block')">답글</button>
+    
+        
+        <!-- 아이디가 같으면 -->
+        <button onclick="$('.c_con').eq(0).css('display','none');$('.cedit_form').eq(0).css('display','block')">수정</button>
+        <button onclick="window.open('/myapp/board/cdel?cno=27&no=196','hiddenframe1')">삭제</button>
+        
+        
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </td>
+    <td class="comment_thumb">
+    추천:2
+    <button onclick="window.open('/myapp/board/cthumbup?cno=27','hiddenframe1')">추천</button>
+    </td>
+    </tr>
+    <tr class="comment_main_con">
+    <td colspan="3">
+    <span class="c_con">댓글입니다.</span>
+    <form action="/myapp/board/cUpdate" class="cedit_form" method="POST" style="display: none;">
+    <input type="hidden" name="cno" id="cno" value="27">
+    <input type="text" name="con" id="con" class="input_con" value="댓글입니다.">
+    <button type="submit">수정</button>
+    </form>
+    </td>
+    </tr>
+    
+    <tr class="cc_form" style="display:none;">
+    <td>
+    <form action="/myapp/board/ccWrite" method="POST">
+    <input type="hidden" name="cno" value="27">
+    <input type="hidden" name="writer" value="admin2">
+    <input type="text" name="con">
+    <button>작성</button>
+    </form>
+    </td>
+    
+    </tr>
+    
+    
+    
+     
+         
+         <tr class="c_comment">
+         <td colspan="2"> ㄴ>&nbsp;&nbsp;&nbsp;admin2 | 2022-06-27
+         
+        
+        <!-- 아이디가 같으면 -->
+        <button onclick="window.open('/myapp/board/ccdel?ccno=24','hiddenframe1')">삭제</button>
+        
+        
+        
+    
+    
+         
+         
+         </td>
+         <td style="text-align: right;">추천:1
+         <button onclick="window.open('/myapp/board/ccthumbup?ccno=24','hiddenframe1')">추천</button>
+         </td>
+         </tr>
+         <tr class="c_comment">
+         <td style="height: 50px; vertical-align: top;">대댓글입니다.</td>
+         </tr>
+         
+     
+    
+    
+    
+    
+    
+    </tbody>
+    </table>
+    
+    <form action="/myapp/board/cWrite" id="comment_form" method="post">
+    <input type="hidden" name="bno" value="196">
+    <input type="hidden" name="writer" value="admin2">
+    <table class="comment_form">
+    <tbody>
+    <tr>
+    <td colspan="2" style="width:95%;"><input style="width: 100%;" type="text" name="con" id="con" class="con" placeholder="댓글을 작성해보세요" required></td>
+    <td style="padding-top: 10px; text-align: right;"><button type="submit">작성</button></td>
+    </tr>
+    </tbody>
+    </table>
+    </form>
+    
+     </div>
+    </div>
+    
+    
+         <footer id="footer">
+        
+    
+       
+        <div class="footer_wrap">
+            <div class="footer_top" >
+                <a href="#" target="_blank"><i class="xi-youtube-play xi-5x"></i>   </i></a>
+                <a href="#" target="_blank"><i class="xi-instagram xi-5x"></i>   </i></a>
+                <a href="#" target="_blank"><i class="xi-kakaotalk xi-5x"></i>   </i></a>
+                <a href="#" target="_blank"><i class="xi-message xi-5x"></i>   </i></a>
+            </div>
+            <div class="ft_bind">
+            <div class="footer_bottom">
+                <img src="/myapp/resources/img/footer_logo.png" alt="로고">
+            </div>
+            <div class="footer_info">
+                <nav class="nav1"><a href="#" target="_blank">개인정보정책</a></nav>
+                <nav class="nav2"><a href="#" target="_blank">이용약관</a></nav>
+                <div>
+                    <span>
+                        <strong>주소 : </strong>
+                        경기도 파주시 문산읍 방촌로 1675-20 (당동리 905) 무척조은병원
+                    </span>
+                    <span>
+                        <strong>E-mail : </strong>
+                        greekr4@naver.com
+                    </span>
+                    <br>
+                    <span>
+                        <strong>사업자등록번호 : </strong>
+                        111-11-11111
+                    </span>
+                    <span>
+                        <strong>대표원장 : </strong>
+                            김태균
+                    </span>
+                    <span>
+                        <strong>전화번호 : </strong>
+                        010-4191-1611
+                    </span>
+                    <p>COPYRIGHT 2022 MOOCHEOKJOEN. ALL RIGHTS RESERVED.</p>
+                </div>
+                <button type="button" id="top_btn" style="border: 0; cursor: pointer;">
+                    <img src="/myapp/resources/img/gotop.jpg" alt="버튼">
+                </button>
+            </div>
+            </div>
+        </div>
+        <script>
+    
+                        $('#top_btn').click(function(){
+                        $('html,body').animate({scrollTop:0},500);
+                        });
+        </script>
+    
+    
+        </footer>
+    </body>
+    </html>
+    
